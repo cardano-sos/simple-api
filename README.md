@@ -40,10 +40,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ```bash
 curl -X POST http://localhost:3000/api/wallet/convert \
+  -H "Origin: https://example.com" \
   -H "Content-Type: application/json" \
   -d '{
     "paymentHexAddress": "013217192bf6cfd969327acea9d038d7c6d809f2b2acb14d6cea2d05bc67bc0bcc015c68438748cae082e7c3fa687719ee8cd68a0da45fbc1a",
     "rewardHexAddress": "e167bc0bcc015c68438748cae082e7c3fa687719ee8cd68a0da45fbc1a",
     "networkId": 0
-  }'
+  }' \
+  -v
 ```
